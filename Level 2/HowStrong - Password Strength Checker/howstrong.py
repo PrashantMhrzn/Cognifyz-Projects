@@ -73,7 +73,7 @@ class Checker:
             strength = "Very Weak Password."
 
         # Display stats
-        print("\n🔍 Password Analysis:")
+        print("\nPassword Analysis:")
         print(f"Total characters: {total_pw_length}")
         print(f"Uppercase letters: {self.upper_count}")
         print(f"Lowercase letters: {self.lower_count}")
@@ -81,9 +81,16 @@ class Checker:
         print(f"Special characters: {self.special_count}")
         print(f"Strength: {strength}")
 
+    def outro(self):
+        print('''
+Author: Prashant Maharjan     
+              ''')
     
         
+if __name__ == '__main__':
+    checker = Checker()
+    password = input("Enter password you want to check: ")
+    checker.check(password)
+    checker.outro()
 
-checker = Checker()
-password = input("Enter your password: ")
-checker.check(password)
+# Project by - Prashant Maharjan
